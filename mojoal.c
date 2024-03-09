@@ -1340,7 +1340,7 @@ static void pitch_shift(ALsource *src, const ALbuffer *buffer, int numSampsToPro
             } 
 
             /* zero negative frequencies */
-            for (k = pitch_framesize+2; k < 2*pitch_framesize; k++) state->workspace[k] = 0.;
+            for (k = pitch_framesize+2; k < 2*pitch_framesize; k++) state->workspace[k] = 0.f;
 
             /* do inverse transform */
             pitch_fft(state->workspace, pitch_framesize, 1);
